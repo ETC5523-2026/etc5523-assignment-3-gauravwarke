@@ -1,0 +1,232 @@
+---
+title: "Climate change made Black Summer's fire weather at least 30% more likely"
+description: "What the science on the 2019/20 bushfires means for people living in bushfire-prone southeastern Australia, and what it cannot tell you."
+author:
+  - name: "Gaurav Warke"
+    affiliation: "Monash University"
+date: "2026-10-05"
+categories: [climate, bushfires, data stories]
+bibliography: references.bib
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+```{r}
+#| label: setup
+library(tidyverse)
+library(gt)
+```
+
+**For people in bushfire-prone southeastern Australia, a major study found that climate change had made fire weather like Black Summer's at least 30% more likely than in the early 1900s.**
+
+## The question: has Black Summer's fire weather become more likely?
+
+The 2019/20 fire season brought weeks of smoke, closed roads and evacuation warnings across southeastern Australia. Fires spread fastest in hot, dry, windy weather, and scientists combine temperature, humidity, rainfall and wind into one score called the **Fire Weather Index**. The higher the score, the harder a fire is to control.
+
+This matters because most households plan around the seasons they remember: when to clear gutters, how long to keep a fire plan ready, whether to stay or leave early. If weather like 2019/20 has become more likely, a plan based on past seasons will underestimate how often it is needed. This post answers three questions a resident might ask:
+
+1. **Has fire weather as extreme as Black Summer's become more likely?**
+2. **What is driving the change: heat or drought?**
+3. **What could happen as the climate keeps warming?**
+
+## Where the evidence comes from
+
+To answer these questions, I draw on a peer-reviewed study by an international team of climate scientists [@vanoldenborgh2021]. It covers the land between the Great Dividing Range and the coast in southeastern Australia, over the September–February fire season. The team compared weather records since 1979 from ERA5, a dataset that combines observations with a weather model [@hersbach2020], with computer simulations of the climate with and without the warming caused by people. The authors made their data and analysis scripts available through the [KNMI Climate Explorer](https://climexp.knmi.nl/).
+
+These estimates compare the climate around 2019/20 with that of the early 1900s. The figure and table below summarise estimates reported in the study; I have not reanalysed the underlying weather records.
+
+## What the evidence shows
+
+@fig-likelihood answers questions 1 and 3 at a glance: any marker to the right of the dashed line means that kind of weather has become more likely than in the early 1900s.
+
+```{r}
+#| label: fig-likelihood
+#| fig-cap: "Change in likelihood compared with the early 1900s. Triangles show the lower bound of the study's uncertainty range. Circles show the model best estimate where one was reported; for extreme heat the study gave only a lower bound, with no best estimate or upper bound. The monthly lower bound (0.8×) is below 1×, so no change or a small decrease cannot be ruled out. The +2°C row is a scenario, not a past observation. Source: van Oldenborgh et al. (2021), Sections 3 and 5.5."
+#| fig-alt: "Dot chart in two panels. Panel one, 2019/20 climate compared with the early 1900s: a week of extreme fire weather has a lower bound of 1.3 times and a model best estimate of 1.8 times as likely; a week of extreme heat has a lower bound of 2 times with no best estimate; a month of severe fire weather has a model best estimate of 2 times but a lower bound of 0.8 times, below the no-change line, so it is uncertain. Panel two, a scenario with 2 degrees of global warming: a week of extreme fire weather has a lower bound of 4 times and a model best estimate of 8 times as likely."
+#| fig-width: 8.5
+#| fig-height: 5.2
+est <- tibble(
+  period = rep(c("2019/20 climate", "2019/20 climate", "2019/20 climate",
+                 "2°C scenario"), 2),
+  event  = rep(c("Week of extreme fire weather", "Week of extreme heat",
+                 "Month of severe fire weather", "Week of extreme fire weather "), 2),
+  type   = rep(c("Minimum increase", "Best estimate"), each = 4),
+  value  = c(1.3, 2, 0.8, 4,   1.8, NA, 2, 8),
+  clear  = rep(c("Clear", "Clear", "Uncertain", "Clear"), 2)
+) |>
+  mutate(event  = fct_rev(fct_inorder(event)),
+         period = fct_inorder(period))
+
+lab <- tibble(
+  period = factor(c("2019/20 climate", "2019/20 climate", "2019/20 climate",
+                    "2°C scenario"), levels = levels(est$period)),
+  event  = factor(c("Week of extreme fire weather", "Week of extreme heat",
+                    "Month of severe fire weather", "Week of extreme fire weather "),
+                  levels = levels(est$event)),
+  x      = c(2.35, 2.45, 2.45, 8.45),
+  label  = c("at least 1.3×, model best estimate 1.8×",
+             "at least 2× (no best estimate or upper bound)",
+             "uncertain: lower bound below 1×",
+             "at least 4×, model best estimate 8×")
+)
+
+ggplot(est, aes(x = value, y = event)) +
+  geom_vline(xintercept = 1, linetype = "dashed", colour = "grey35") +
+  geom_point(aes(shape = type, fill = clear), size = 4.2, colour = "#14243A",
+             stroke = 0.6, na.rm = TRUE) +
+  geom_text(data = lab, aes(x = x, y = event, label = label),
+            hjust = 0, size = 3.6, colour = "#222222") +
+  geom_text(data = tibble(
+              period = factor("2°C scenario", levels = levels(est$period)),
+              event = factor("Week of extreme fire weather ", levels = levels(est$event)),
+              x = c(4, 8), label = c("lower bound", "model best estimate")),
+            aes(x = x, y = event, label = label), vjust = 2.1,
+            size = 3.3, colour = "grey30", fontface = "italic") +
+  facet_grid(period ~ ., scales = "free_y", space = "free_y") +
+  scale_shape_manual(values = c("Minimum increase" = 24, "Best estimate" = 21),
+                     breaks = c("Minimum increase", "Best estimate"), name = NULL) +
+  scale_fill_manual(values = c("Clear" = "#C2501A", "Uncertain" = "#BDBDBD"),
+                    guide = "none") +
+  scale_x_continuous(breaks = c(0, 1, 2, 4, 6, 8),
+                     labels = c("0", "1×\nno change", "2×", "4×", "6×", "8×"),
+                     limits = c(0, 14), expand = c(0, 0)) +
+  labs(title = "Fire-weather likelihood: 2019/20 estimates and a warmer-climate scenario",
+       subtitle = "Triangle = lower bound   Circle = model best estimate   Grey = uncertain result",
+       x = "Times as likely as in the early 1900s", y = NULL) +
+  theme_minimal(base_size = 13) +
+  theme(plot.title.position = "plot",
+        plot.title = element_text(face = "bold", size = 13, colour = "#1F3A5F"),
+        plot.subtitle = element_text(colour = "grey30", size = 10.5),
+        legend.position = "none",
+        strip.text.y = element_text(angle = -90, face = "bold",
+                                    colour = "#1F3A5F", size = 10.5),
+        strip.background = element_rect(fill = "#EAEFF5", colour = NA),
+        panel.spacing = unit(1.1, "lines"),
+        panel.grid.minor = element_blank(),
+        panel.grid.major.y = element_blank(),
+        axis.text.y = element_text(size = 11, colour = "#222222"),
+        plot.background = element_rect(fill = "#FBF8F3", colour = NA),
+        panel.background = element_rect(fill = "#FBF8F3", colour = NA))
+```
+
+### 1. Yes: extreme fire-weather weeks became at least 30% more likely
+
+In the 2019/20 climate, a week of fire weather as extreme as Black Summer's was **at least 1.3 times as likely** as in the early 1900s, with a model best estimate of 1.8 times. Across the same number of comparable seasons, an event expected 10 times in the earlier climate would be expected at least 13 times in the 2019/20 climate. The weather records since 1979 suggest an even larger rise, but the authors treat that figure with caution because the record is short. Longer dangerous stretches are less certain: a month of severe fire weather was about twice as likely in the simulations, but the estimate is too uncertain to rule out no change.
+
+The next question is what lies behind this rise.
+
+### 2. Heat is the main driver; drought is less clear
+
+A hot week like the one in December 2019 was **at least twice as likely**, and the study identifies rising temperature as the most important reason fire weather worsened. The simulations also tend to underestimate how fast extreme heat has risen in the real world, so the true increase in fire weather is probably **larger** than 30%.
+
+Rainfall tells a different story. The study did **not detect a climate-change trend** in a very dry year or in the driest month of the fire season. Natural climate patterns played a large part in 2019, as @fig-drought shows. The **Indian Ocean Dipole** is a see-saw in sea temperatures between the western and eastern Indian Ocean; in 2019 it hit a record positive phase, which reduces rain over southeastern Australia. The **Southern Annular Mode** describes how far north the westerly winds around Antarctica sit; in 2019 it was strongly negative, which also brought dry conditions. The study reports that each explained about one-third of the drought between July and December.
+
+```{r}
+#| label: fig-drought
+#| fig-cap: "Approximate share of the July–December 2019 rainfall deficit in southeastern Australia explained by each of two natural climate patterns. The study reports each share as 'about one-third' (shown here as about 33%); this is not a new calculation. Source: van Oldenborgh et al. (2021), Section 8."
+#| fig-alt: "Dot chart with two rows on a 0 to 50 percent scale. The Indian Ocean Dipole explained about 33 percent of the July to December 2019 rainfall deficit, and the Southern Annular Mode explained about 33 percent."
+#| fig-width: 8.5
+#| fig-height: 2.6
+drought <- tibble(
+  driver = c("Indian Ocean Dipole\n(record positive phase)",
+             "Southern Annular Mode\n(strongly negative phase)"),
+  share  = c(100/3, 100/3),
+  kind   = "Natural pattern"
+) |>
+  mutate(driver = fct_rev(fct_inorder(driver)))
+
+ggplot(drought, aes(x = share, y = driver, colour = kind)) +
+  geom_segment(aes(x = 0, xend = share, yend = driver), linewidth = 1.4) +
+  geom_point(size = 4.5) +
+  geom_text(aes(label = "about 33%"), hjust = -0.35, size = 3.8,
+            colour = "#222222") +
+  scale_colour_manual(values = c("Natural pattern" = "#1F3A5F",
+                                 "Other" = "#A6A6A6"), guide = "none") +
+  scale_x_continuous(limits = c(0, 50), breaks = seq(0, 50, 10),
+                     labels = function(x) paste0(x, "%"),
+                     expand = c(0, 0)) +
+  labs(title = "Two natural climate patterns each explained about one-third of the 2019 drought",
+       x = "Share of the July–December 2019 rainfall deficit", y = NULL) +
+  theme_minimal(base_size = 13) +
+  theme(plot.title.position = "plot",
+        plot.title = element_text(face = "bold", size = 13, colour = "#1F3A5F"),
+        panel.grid.minor = element_blank(),
+        panel.grid.major.y = element_blank(),
+        axis.text.y = element_text(size = 11, colour = "#222222"),
+        plot.background = element_rect(fill = "#FBF8F3", colour = NA),
+        panel.background = element_rect(fill = "#FBF8F3", colour = NA),
+        plot.margin = margin(6, 14, 6, 6))
+```
+
+So the dryness was real, but the study links it mainly to natural variability rather than to a climate-change trend. Heat, not drought, is the part of the risk that climate change has clearly shifted, which raises the third question: what happens as warming continues?
+
+### 3. In a warmer climate, the risk could keep rising
+
+In a scenario where global warming reaches **2°C** above pre-industrial levels, fire weather like Black Summer's becomes **at least 4 times as likely** as in the early 1900s. This comes from only two climate models, so it shows the direction of change rather than a forecast for any particular year.
+
+@tbl-meaning groups each result under the question it answers and says what it means in practice, so you can look up any single result without rereading the post.
+
+```{r}
+#| label: tbl-meaning
+#| tbl-cap: "What each result means for people in bushfire-prone southeastern Australia, grouped by question. Comparisons are with the early 1900s. Source: van Oldenborgh et al. (2021)."
+tibble(
+  question = c(rep("1. Has extreme fire weather become more likely?", 2),
+               rep("2. What is driving it?", 2),
+               "3. What could happen with more warming?"),
+  measure = c("Week of extreme fire weather (2019/20)",
+              "Month of severe fire weather (2019/20)",
+              "Week of extreme heat (2019/20)",
+              "Very dry year, or driest month of the season",
+              "Week of extreme fire weather (2°C scenario)"),
+  finding = c("At least 1.3× (30% more)",
+              "About 2×, but uncertain",
+              "At least 2×",
+              "No climate-change trend detected",
+              "At least 4×"),
+  meaning = c("Severe fire-weather weeks were more likely than a century earlier.",
+              "The estimate is too uncertain to rule out no change.",
+              "Hotter weeks are the main reason fire weather worsened.",
+              "Natural climate patterns contributed strongly to the 2019 drought.",
+              "The risk is expected to grow if warming continues.")
+) |>
+  gt(groupname_col = "question") |>
+  cols_label(measure = "What was measured",
+             finding = "What the study found",
+             meaning = "What it means") |>
+  tab_style(style = cell_text(weight = "bold", color = "#1F3A5F"),
+            locations = cells_column_labels()) |>
+  tab_style(style = list(cell_text(weight = "bold", color = "#1F3A5F"),
+                         cell_fill(color = "#EAEFF5")),
+            locations = cells_row_groups()) |>
+  tab_style(style = cell_text(weight = "bold", color = "#A3410F"),
+            locations = cells_body(columns = finding, rows = c(1, 3, 5))) |>
+  tab_style(style = cell_text(color = "#555555", style = "italic"),
+            locations = cells_body(columns = finding, rows = c(2, 4))) |>
+  cols_width(measure ~ pct(32), finding ~ pct(26), meaning ~ pct(42)) |>
+  tab_options(table.width = pct(100)) |>
+  tab_source_note("Bold orange: a clear increase. Grey italic: no trend detected or an uncertain result.") |>
+  opt_table_font(font = "Source Sans 3")
+```
+
+## What this evidence cannot tell you
+
+These answers come with one important limit. They describe **how likely dangerous weather is** over a region, not whether a particular home will burn. Whether a fire starts, how it spreads and what it damages also depend on ignitions, vegetation, where homes are built and how well communities prepare. The study does not predict when the next severe season will come.
+
+## The answer: plan for a warmer climate
+
+With that limit in mind, here are the answers to the three questions:
+
+1. **Has extreme fire weather become more likely?** Yes, by at least 30% in the 2019/20 climate, and probably more.
+2. **What is driving it?** Mainly heat. The study did not detect a climate-change trend in the drought measures it tested.
+3. **What could happen next?** In a 2°C-warmer world, that fire weather becomes at least four times as likely.
+
+The study shows why planning in bushfire-prone southeastern Australia should account for a warmer climate, while recognising that these regional results cannot predict the risk to an individual home [@vanoldenborgh2021].
+
+## References
+
+::: {#refs}
+:::
+
+*The figures and table were made in R with the tidyverse [@tidyverse] and gt [@gt].*
