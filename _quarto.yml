@@ -1,17 +1,35 @@
 project:
   type: website
+  output-dir: docs
+  resources:
+    - .nojekyll
+  render:
+    - index.qmd
+    - about.qmd
+    - posts/**/*.qmd
 
 website:
-  title: "blog-template"
+  title: "Gaurav Warke | Data Stories"
+  site-url: "https://etc5523-2026.github.io/etc5523-assignment-3-gauravwarke/"
+  description: "Plain-language data stories by Gaurav Warke, Master of Business Analytics student at Monash University."
   navbar:
     right:
-      - about.qmd
+      - text: "Blog"
+        href: index.qmd
+      - text: "About"
+        href: about.qmd
       - icon: github
-        href: https://github.com/etc5523-2022
+        href: https://github.com/GauravWarke
+        aria-label: "Gaurav Warke on GitHub"
+      - icon: linkedin
+        href: https://www.linkedin.com/in/gaurav-warke-b5493b394/
+        aria-label: "Gaurav Warke on LinkedIn"
+  page-footer:
+    center: "© 2026 Gaurav Warke · Built with Quarto"
+
 format:
   html:
-    theme: cosmo
-    css: styles.css
-
-
-
+    theme:
+      light: [cosmo, custom.scss]
+    toc: true
+    smooth-scroll: true
