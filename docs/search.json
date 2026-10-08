@@ -1,0 +1,86 @@
+[
+  {
+    "objectID": "posts/bushfire-fire-weather/index.html",
+    "href": "posts/bushfire-fire-weather/index.html",
+    "title": "Climate change made Black Summer’s fire weather at least 30% more likely",
+    "section": "",
+    "text": "For people in bushfire-prone southeastern Australia, a major study found that climate change had made fire weather like Black Summer’s at least 30% more likely than in the early 1900s."
+  },
+  {
+    "objectID": "posts/bushfire-fire-weather/index.html#the-question-has-black-summers-fire-weather-become-more-likely",
+    "href": "posts/bushfire-fire-weather/index.html#the-question-has-black-summers-fire-weather-become-more-likely",
+    "title": "Climate change made Black Summer’s fire weather at least 30% more likely",
+    "section": "The question: has Black Summer’s fire weather become more likely?",
+    "text": "The question: has Black Summer’s fire weather become more likely?\nThe 2019/20 fire season brought weeks of smoke, closed roads and evacuation warnings across southeastern Australia. Fires spread fastest in hot, dry, windy weather, and scientists combine temperature, humidity, rainfall and wind into one score called the Fire Weather Index. The higher the score, the harder a fire is to control.\nThis matters because most households plan around the seasons they remember: when to clear gutters, how long to keep a fire plan ready, whether to stay or leave early. If weather like 2019/20 has become more likely, a plan based on past seasons will underestimate how often it is needed. This post answers three questions a resident might ask:\n\nHas fire weather as extreme as Black Summer’s become more likely?\nWhat is driving the change: heat or drought?\nWhat could happen as the climate keeps warming?"
+  },
+  {
+    "objectID": "posts/bushfire-fire-weather/index.html#where-the-evidence-comes-from",
+    "href": "posts/bushfire-fire-weather/index.html#where-the-evidence-comes-from",
+    "title": "Climate change made Black Summer’s fire weather at least 30% more likely",
+    "section": "Where the evidence comes from",
+    "text": "Where the evidence comes from\nTo answer these questions, I draw on a peer-reviewed study by an international team of climate scientists (van Oldenborgh et al. 2021). It covers the land between the Great Dividing Range and the coast in southeastern Australia, over the September–February fire season. The team compared weather records since 1979 from ERA5, a dataset that combines observations with a weather model (Hersbach et al. 2020), with computer simulations of the climate with and without the warming caused by people. The authors made their data and analysis scripts available through the KNMI Climate Explorer.\nThese estimates compare the climate around 2019/20 with that of the early 1900s. The figure and table below summarise estimates reported in the study; I have not reanalysed the underlying weather records."
+  },
+  {
+    "objectID": "posts/bushfire-fire-weather/index.html#what-the-evidence-shows",
+    "href": "posts/bushfire-fire-weather/index.html#what-the-evidence-shows",
+    "title": "Climate change made Black Summer’s fire weather at least 30% more likely",
+    "section": "What the evidence shows",
+    "text": "What the evidence shows\nFigure 1 answers questions 1 and 3 at a glance: any marker to the right of the dashed line means that kind of weather has become more likely than in the early 1900s.\n\n\n\n\n\n\n\n\nFigure 1: Change in likelihood compared with the early 1900s. Triangles show the lower bound of the study’s uncertainty range. Circles show the model best estimate where one was reported; for extreme heat the study gave only a lower bound, with no best estimate or upper bound. The monthly lower bound (0.8×) is below 1×, so no change or a small decrease cannot be ruled out. The +2°C row is a scenario, not a past observation. Source: van Oldenborgh et al. (2021), Sections 3 and 5.5.\n\n\n\n\n\n\n1. Yes: extreme fire-weather weeks became at least 30% more likely\nIn the 2019/20 climate, a week of fire weather as extreme as Black Summer’s was at least 1.3 times as likely as in the early 1900s, with a model best estimate of 1.8 times. Across the same number of comparable seasons, an event expected 10 times in the earlier climate would be expected at least 13 times in the 2019/20 climate. The weather records since 1979 suggest an even larger rise, but the authors treat that figure with caution because the record is short. Longer dangerous stretches are less certain: a month of severe fire weather was about twice as likely in the simulations, but the estimate is too uncertain to rule out no change.\nThe next question is what lies behind this rise.\n\n\n2. Heat is the main driver; drought is less clear\nA hot week like the one in December 2019 was at least twice as likely, and the study identifies rising temperature as the most important reason fire weather worsened. The simulations also tend to underestimate how fast extreme heat has risen in the real world, so the true increase in fire weather is probably larger than 30%.\nRainfall tells a different story. The study did not detect a climate-change trend in a very dry year or in the driest month of the fire season. Natural climate patterns played a large part in 2019, as Figure 2 shows. The Indian Ocean Dipole is a see-saw in sea temperatures between the western and eastern Indian Ocean; in 2019 it hit a record positive phase, which reduces rain over southeastern Australia. The Southern Annular Mode describes how far north the westerly winds around Antarctica sit; in 2019 it was strongly negative, which also brought dry conditions. The study reports that each explained about one-third of the drought between July and December.\n\n\n\n\n\n\n\n\nFigure 2: Approximate share of the July–December 2019 rainfall deficit in southeastern Australia explained by each of two natural climate patterns. The study reports each share as ‘about one-third’ (shown here as about 33%); this is not a new calculation. Source: van Oldenborgh et al. (2021), Section 8.\n\n\n\n\n\nSo the dryness was real, but the study links it mainly to natural variability rather than to a climate-change trend. Heat, not drought, is the part of the risk that climate change has clearly shifted, which raises the third question: what happens as warming continues?\n\n\n3. In a warmer climate, the risk could keep rising\nIn a scenario where global warming reaches 2°C above pre-industrial levels, fire weather like Black Summer’s becomes at least 4 times as likely as in the early 1900s. This comes from only two climate models, so it shows the direction of change rather than a forecast for any particular year.\nTable 1 groups each result under the question it answers and says what it means in practice, so you can look up any single result without rereading the post.\n\n\n\n\nTable 1: What each result means for people in bushfire-prone southeastern Australia, grouped by question. Comparisons are with the early 1900s. Source: van Oldenborgh et al. (2021).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWhat was measured\nWhat the study found\nWhat it means\n\n\n\n\n1. Has extreme fire weather become more likely?\n\n\nWeek of extreme fire weather (2019/20)\nAt least 1.3× (30% more)\nSevere fire-weather weeks were more likely than a century earlier.\n\n\nMonth of severe fire weather (2019/20)\nAbout 2×, but uncertain\nThe estimate is too uncertain to rule out no change.\n\n\n2. What is driving it?\n\n\nWeek of extreme heat (2019/20)\nAt least 2×\nHotter weeks are the main reason fire weather worsened.\n\n\nVery dry year, or driest month of the season\nNo climate-change trend detected\nNatural climate patterns contributed strongly to the 2019 drought.\n\n\n3. What could happen with more warming?\n\n\nWeek of extreme fire weather (2°C scenario)\nAt least 4×\nThe risk is expected to grow if warming continues.\n\n\n\nBold orange: a clear increase. Grey italic: no trend detected or an uncertain result."
+  },
+  {
+    "objectID": "posts/bushfire-fire-weather/index.html#what-this-evidence-cannot-tell-you",
+    "href": "posts/bushfire-fire-weather/index.html#what-this-evidence-cannot-tell-you",
+    "title": "Climate change made Black Summer’s fire weather at least 30% more likely",
+    "section": "What this evidence cannot tell you",
+    "text": "What this evidence cannot tell you\nThese answers come with one important limit. They describe how likely dangerous weather is over a region, not whether a particular home will burn. Whether a fire starts, how it spreads and what it damages also depend on ignitions, vegetation, where homes are built and how well communities prepare. The study does not predict when the next severe season will come."
+  },
+  {
+    "objectID": "posts/bushfire-fire-weather/index.html#the-answer-plan-for-a-warmer-climate",
+    "href": "posts/bushfire-fire-weather/index.html#the-answer-plan-for-a-warmer-climate",
+    "title": "Climate change made Black Summer’s fire weather at least 30% more likely",
+    "section": "The answer: plan for a warmer climate",
+    "text": "The answer: plan for a warmer climate\nWith that limit in mind, here are the answers to the three questions:\n\nHas extreme fire weather become more likely? Yes, by at least 30% in the 2019/20 climate, and probably more.\nWhat is driving it? Mainly heat. The study did not detect a climate-change trend in the drought measures it tested.\nWhat could happen next? In a 2°C-warmer world, that fire weather becomes at least four times as likely.\n\nThe study shows why planning in bushfire-prone southeastern Australia should account for a warmer climate, while recognising that these regional results cannot predict the risk to an individual home (van Oldenborgh et al. 2021)."
+  },
+  {
+    "objectID": "posts/bushfire-fire-weather/index.html#references",
+    "href": "posts/bushfire-fire-weather/index.html#references",
+    "title": "Climate change made Black Summer’s fire weather at least 30% more likely",
+    "section": "References",
+    "text": "References\n\n\nHersbach, Hans, Bill Bell, Paul Berrisford, et al. 2020. “The ERA5 Global Reanalysis.” Quarterly Journal of the Royal Meteorological Society 146 (730): 1999–2049. https://doi.org/10.1002/qj.3803.\n\n\nIannone, Richard, Joe Cheng, Barret Schloerke, Ellis Hughes, Alexandra Lauer, JooYoung Seo, Ken Brevoort, and Olivier Roy. 2024. Gt: Easily Create Presentation-Ready Display Tables. https://gt.rstudio.com.\n\n\nvan Oldenborgh, Geert Jan, Folmer Krikken, Sophie Lewis, Nicholas J. Leach, Flavio Lehner, Kate R. Saunders, Michiel van Weele, et al. 2021. “Attribution of the Australian Bushfire Risk to Anthropogenic Climate Change.” Natural Hazards and Earth System Sciences 21 (3): 941–60. https://doi.org/10.5194/nhess-21-941-2021.\n\n\nWickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy D’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2019. “Welcome to the tidyverse.” Journal of Open Source Software 4 (43): 1686. https://doi.org/10.21105/joss.01686.\n\n\nThe figures and table were made in R with the tidyverse (Wickham et al. 2019) and gt (Iannone et al. 2024)."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Data stories, in plain language",
+    "section": "",
+    "text": "Climate change made Black Summer’s fire weather at least 30% more likely\n\n\n\n\n\n\nclimate\n\n\nbushfires\n\n\ndata stories\n\n\n\nWhat the science on the 2019/20 bushfires means for people living in bushfire-prone southeastern Australia, and what it cannot tell you.\n\n\n\n\n\nOct 5, 2026\n\n\nGaurav Warke\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Gaurav Warke",
+    "section": "",
+    "text": "I am a first-year Master of Business Analytics student at Monash University in Melbourne. I grew up in Mumbai.\nBefore Monash, I worked as a Junior Data Analyst and Database Manager at idigitalxp, where I looked after the data behind day-to-day decisions and turned it into reports people could act on. That work taught me that an analysis is only useful if the right person can understand it.\nI work mainly in R, Python and SQL, and I build dashboards in Power BI and Tableau. I use Git and GitHub to keep my projects reproducible and open."
+  },
+  {
+    "objectID": "about.html#what-this-blog-is-about",
+    "href": "about.html#what-this-blog-is-about",
+    "title": "Gaurav Warke",
+    "section": "What this blog is about",
+    "text": "What this blog is about\nThis blog is where I practise turning technical evidence into clear answers for the people it affects. Each post starts with a question a reader might actually ask, shows the evidence behind the answer, and is honest about what the evidence cannot tell you."
+  },
+  {
+    "objectID": "about.html#beyond-analytics",
+    "href": "about.html#beyond-analytics",
+    "title": "Gaurav Warke",
+    "section": "Beyond analytics",
+    "text": "Beyond analytics\nI have led volunteer teams with AIESEC in Mumbai, and I held Discipline Head roles with the Computer Society of India and my college council. Those roles taught me to explain ideas to people with very different backgrounds, which is the skill this blog is built around."
+  },
+  {
+    "objectID": "about.html#contact",
+    "href": "about.html#contact",
+    "title": "Gaurav Warke",
+    "section": "Contact",
+    "text": "Contact\nThe best way to reach me is by email or on LinkedIn. My code is on GitHub."
+  }
+]
