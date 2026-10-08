@@ -1,13 +1,42 @@
 ---
-title: "About"
+title: "Gaurav Warke"
+subtitle: "Master of Business Analytics student, Monash University"
 image: profile.jpg
+image-alt: "Photo of Gaurav Warke by the bay at sunset, with the Melbourne skyline behind him"
+toc: true
 about:
-  template: jolla
+  template: trestles
+  image-shape: round
+  image-width: 15em
   links:
     - icon: github
-      text: Github
-      href: https://github.com/etc5523-2022
-
+      text: GitHub
+      href: https://github.com/GauravWarke
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/gaurav-warke-b5493b394/
+    - icon: envelope
+      text: Email
+      href: mailto:gauravwarke8@gmail.com
+    - icon: journal-text
+      text: Blog
+      href: https://etc5523-2026.github.io/etc5523-assignment-3-gauravwarke/
 ---
 
-This is a blog template for the ETC5523 Communicating with Data assessment at Monash University.
+I am a first-year Master of Business Analytics student at Monash University in Melbourne. I grew up in Mumbai.
+
+Before Monash, I worked as a Junior Data Analyst and Database Manager at idigitalxp, where I looked after the data behind day-to-day decisions and turned it into reports people could act on. That work taught me that an analysis is only useful if the right person can understand it.
+
+I work mainly in R, Python and SQL, and I build dashboards in Power BI and Tableau. I use Git and GitHub to keep my projects reproducible and open.
+
+## What this blog is about
+
+This blog is where I practise turning technical evidence into clear answers for the people it affects. Each post starts with a question a reader might actually ask, shows the evidence behind the answer, and is honest about what the evidence cannot tell you.
+
+## Beyond analytics
+
+I have led volunteer teams with AIESEC in Mumbai, and I held Discipline Head roles with the Computer Society of India and my college council. Those roles taught me to explain ideas to people with very different backgrounds, which is the skill this blog is built around.
+
+## Contact
+
+The best way to reach me is by [email](mailto:gauravwarke8@gmail.com) or on [LinkedIn](https://www.linkedin.com/in/gaurav-warke-b5493b394/). My code is on [GitHub](https://github.com/GauravWarke).
