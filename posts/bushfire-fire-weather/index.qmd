@@ -4,7 +4,7 @@ description: "What the science on the 2019/20 bushfires means for people living 
 author:
   - name: "Gaurav Warke"
     affiliation: "Monash University"
-date: "2026-10-05"
+date: "2026-10-11"
 categories: [climate, bushfires, data stories]
 bibliography: references.bib
 execute:

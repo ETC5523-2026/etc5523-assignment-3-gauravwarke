@@ -1,6 +1,6 @@
 ---
-title: "Data stories, in plain language"
-description: "Short posts that turn research and data into answers people can use."
+title: "Is the fire weather we fear becoming more common?"
+description: "Plain-language answers from climate research, for the people who live with the risk."
 listing:
   contents: posts
   sort: "date desc"
