@@ -1,0 +1,37 @@
+/*-- scss:defaults --*/
+// Warm, high-contrast palette: charcoal text on off-white, ember accents.
+$body-bg: #FBF8F3;
+$body-color: #222222;
+$headings-color: #1F3A5F;
+$link-color: #C2501A;
+$primary: #1F3A5F;
+$navbar-bg: #14243A;
+$navbar-fg: #F5EFE6;
+$navbar-hl: #F2A65A;
+$footer-bg: #14243A;
+$footer-fg: #F5EFE6;
+$font-family-sans-serif: "Source Sans 3", "Helvetica Neue", Arial, sans-serif;
+$headings-font-family: "Merriweather", Georgia, serif;
+$font-size-root: 18px;
+$line-height-base: 1.65;
+
+/*-- scss:rules --*/
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Source+Sans+3:wght@400;600&display=swap');
+
+.quarto-title-banner {
+  background-color: #1F3A5F;
+  color: #FFFFFF;
+}
+.quarto-title-banner .title,
+.quarto-title-banner .description,
+.quarto-title-banner .quarto-title-meta-heading,
+.quarto-title-banner .quarto-title-meta-contents { color: #FFFFFF; }
+
+h2 { border-bottom: 2px solid #F2A65A; padding-bottom: .25rem; margin-top: 2.2rem; }
+
+// Readable line length for long-form posts
+main.content { max-width: 760px; }
+
+figcaption, .figure-caption, caption { color: #4A4A4A; font-size: .9rem; }
+
+.callout { border-left-color: #C2501A !important; }
