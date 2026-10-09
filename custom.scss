@@ -36,13 +36,10 @@ figcaption, .figure-caption, caption { color: #4A4A4A; font-size: .9rem; }
 
 .callout { border-left-color: #C2501A !important; }
 
-// Home listing: give the post's preview graph a full-width row so it is readable
-.quarto-listing-default .quarto-post.image-right { flex-wrap: wrap; }
-.quarto-listing-default .quarto-post .thumbnail {
-  flex: 1 1 100%;
-  max-width: 100%;
-  order: 3;
-  margin-top: 1rem;
+// Home listing: keep the preview graph beside the heading, but larger than the default
+.quarto-listing-default .quarto-post.image-right .thumbnail {
+  flex: 0 0 48%;
+  max-width: 48%;
 }
 .quarto-listing-default .quarto-post .thumbnail img,
 .quarto-listing-default .quarto-post .thumbnail-image {
@@ -52,4 +49,7 @@ figcaption, .figure-caption, caption { color: #4A4A4A; font-size: .9rem; }
   object-fit: contain;
   border: 1px solid #E3DDD3;
   border-radius: 6px;
+}
+@media (max-width: 767.98px) {
+  .quarto-listing-default .quarto-post.image-right .thumbnail { flex: 1 1 100%; max-width: 100%; }
 }

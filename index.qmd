@@ -1,6 +1,6 @@
 ---
 title: "Is the fire weather we fear becoming more common?"
-description: "Plain-language answers from climate research, for the people who live with the risk."
+description: "What the science says about the weather behind Black Summer, and what it means for your next fire season."
 listing:
   contents: posts
   sort: "date desc"
