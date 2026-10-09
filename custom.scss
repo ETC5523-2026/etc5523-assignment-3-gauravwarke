@@ -30,7 +30,7 @@ $line-height-base: 1.65;
 h2 { border-bottom: 2px solid #F2A65A; padding-bottom: .25rem; margin-top: 2.2rem; }
 
 // Readable line length for long-form posts
-main.content { max-width: 760px; }
+main.content:not(.column-page-left) { max-width: 760px; }
 
 figcaption, .figure-caption, caption { color: #4A4A4A; font-size: .9rem; }
 
@@ -38,8 +38,8 @@ figcaption, .figure-caption, caption { color: #4A4A4A; font-size: .9rem; }
 
 // Home listing: keep the preview graph beside the heading, but larger than the default
 .quarto-listing-default .quarto-post.image-right .thumbnail {
-  flex: 0 0 48%;
-  max-width: 48%;
+  flex: 0 0 40%;
+  max-width: 40%;
 }
 .quarto-listing-default .quarto-post .thumbnail img,
 .quarto-listing-default .quarto-post .thumbnail-image {
@@ -52,4 +52,12 @@ figcaption, .figure-caption, caption { color: #4A4A4A; font-size: .9rem; }
 }
 @media (max-width: 767.98px) {
   .quarto-listing-default .quarto-post.image-right .thumbnail { flex: 1 1 100%; max-width: 100%; }
+}
+
+// Keep the date/author column readable and away from the page edge
+.quarto-listing-default .quarto-post .metadata {
+  flex: 0 0 8.5rem;
+  min-width: 8.5rem;
+  white-space: nowrap;
+  padding-left: 0.75rem;
 }
