@@ -9,7 +9,7 @@ project:
     - posts/**/*.qmd
 
 website:
-  title: "Gaurav Warke | Data, Explained"
+  title: "Gaurav Warke"
   site-url: "https://etc5523-2026.github.io/etc5523-assignment-3-gauravwarke/"
   description: "Plain-language data stories by Gaurav Warke, Master of Business Analytics student at Monash University."
   navbar:
