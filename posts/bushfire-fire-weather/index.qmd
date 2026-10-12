@@ -41,7 +41,7 @@ These estimates compare the climate around 2019/20 with that of the early 1900s.
 
 ## What the evidence shows
 
-@fig-likelihood answers questions 1 and 3 at a glance: any bar that reaches past the dashed line means that kind of weather has become more likely than in the early 1900s.
+@fig-likelihood answers questions 1 and 3 at a glance. Bars show the study's lower bounds. A lower bound above 1× supports an increase; the monthly result remains uncertain.
 
 ```{r}
 #| label: fig-likelihood
@@ -127,7 +127,7 @@ ggplot(drought, aes(x = share, y = driver)) +
         axis.text.y = element_text(colour = "#222222"))
 ```
 
-So the dryness was real, but the study links it mainly to natural variability rather than to a climate-change trend. Heat, not drought, is the part of the risk that climate change has clearly shifted, which raises the third question: what happens as warming continues?
+So the dryness was real, but the study links it mainly to natural variability rather than to a climate-change trend. The study found a clear climate-change effect on extreme heat, but no detectable trend in the rainfall-based drought measures it tested. That raises the third question: what happens as warming continues?
 
 ### 3. In a warmer climate, the risk could keep rising
 
