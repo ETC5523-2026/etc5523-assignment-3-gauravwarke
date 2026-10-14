@@ -8,4 +8,4 @@
 
 ## AI-use declaration
 
-I used Claude (Anthropic), a generative AI assistant, while preparing this assignment: to plan the post against the brief and rubric, to draft and revise wording, to write and debug the R code for the figures and table, to create the website theme (`custom.scss`) and About page layout, and to review drafts and suggest corrections. I checked every reported number against the original article (van Oldenborgh et al., 2021), made the final decisions myself, and take responsibility for all submitted work.
+I did not use Ai for building my blog.I only used it for understanding how to improve the cosmetics and understanding the process to write a blog.
